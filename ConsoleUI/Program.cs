@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,53 +34,93 @@ namespace ConsoleUI
 
             // DONE Create a list of Vehicle called vehicles
 
+            /*
+            * DONE Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
+            * DONE - new it up as one of each derived class
+            * DONE  Set the properties with object initializer syntax
+            */
+
+            /*
+             * DONE Add the 4 vehicles to the list
+             * DONE Using a foreach loop iterate over each of the properties
+             */
+
+            // DONE Call each of the drive methods for one car and one motorcycle
+
             var vehicles = new List<Vehicle>();
 
+                       
 
             Car car1 = new Car()
             {
+                Name = "Car 1",
                 Year = 2015,
                 Make = "Toyota",
                 Model = "Camry",
                 HasTrunk = true
             };
 
+            vehicles.Add(car1);
+
+
             Motorcycle motorcycle1 = new Motorcycle()
             {
+                Name = "Motorcycle 1",
                 Year = 2005,
                 Make = "Honda",
                 Model = "Shadow",
                 HasSideCart = false
             };
 
+            vehicles.Add(motorcycle1);
+            
+
+
             Vehicle car2 = new Car()
             {
+                Name = "Car 2",
                 Year = 2018,
                 Make = "Chevy",
                 Model = "Silverado",
                 HasTrunk = false,
             };
 
+            vehicles.Add(car2);
+
+
             Vehicle motorcycle2 = new Motorcycle()
             {
+                Name = "Motorcycle 2",
                 Year = 2022,
                 Make = "Yamaha",
                 Model = "Moped",
                 HasSideCart = true
             };
 
-            /*
-             * DONE Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
-             * DONE - new it up as one of each derived class
-             * DONE  Set the properties with object initializer syntax
-             */
+            vehicles.Add(motorcycle2);
 
-            /*
-             * Add the 4 vehicles to the list
-             * Using a foreach loop iterate over each of the properties
-             */
+            
 
-            // Call each of the drive methods for one car and one motorcycle
+            foreach (var vehicle in vehicles)
+            {
+                Console.WriteLine($"Name: {vehicle.Name}");
+                Console.WriteLine($"Year: {vehicle.Year}");
+                Console.WriteLine($"Make: {vehicle.Make}");
+                Console.WriteLine($"Model: {vehicle.Model}");
+                Console.WriteLine();
+                Console.WriteLine();
+
+            }
+
+
+            car1.DriveAbstract();
+            car2.DriveVirtual();
+
+
+            motorcycle2.DriveAbstract();
+            motorcycle2.DriveVirtual();
+            
+           
 
             #endregion            
             Console.ReadLine();
