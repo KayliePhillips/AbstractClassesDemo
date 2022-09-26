@@ -25,18 +25,53 @@ namespace ConsoleUI
              */
 
             /* 
-             * Now create 2 non-abstract classes: Car and Motorcycle, that inherit from Vehicle
-             * Add a distict property in the 2 derived classes such as HasTrunk for Car and HasSideCart for Motorcycle
-             * Provide the implementations for the abstract methods
-             * Only in the Motorcycle class will you override the virtual drive method
+             * DONE Now create 2 non-abstract classes: Car and Motorcycle, that inherit from Vehicle
+             * DONE Add a distict property in the 2 derived classes such as HasTrunk for Car and HasSideCart for Motorcycle
+             * DONE Provide the implementations for the abstract methods
+             * DONE Only in the Motorcycle class will you override the virtual drive method
             */
 
-            // Create a list of Vehicle called vehicles
+            // DONE Create a list of Vehicle called vehicles
+
+            var vehicles = new List<Vehicle>();
+
+
+            Car car1 = new Car()
+            {
+                Year = 2015,
+                Make = "Toyota",
+                Model = "Camry",
+                HasTrunk = true
+            };
+
+            Motorcycle motorcycle1 = new Motorcycle()
+            {
+                Year = 2005,
+                Make = "Honda",
+                Model = "Shadow",
+                HasSideCart = false
+            };
+
+            Vehicle car2 = new Car()
+            {
+                Year = 2018,
+                Make = "Chevy",
+                Model = "Silverado",
+                HasTrunk = false,
+            };
+
+            Vehicle motorcycle2 = new Motorcycle()
+            {
+                Year = 2022,
+                Make = "Yamaha",
+                Model = "Moped",
+                HasSideCart = true
+            };
 
             /*
-             * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
-             * - new it up as one of each derived class
-             * Set the properties with object initializer syntax
+             * DONE Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
+             * DONE - new it up as one of each derived class
+             * DONE  Set the properties with object initializer syntax
              */
 
             /*
